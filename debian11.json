@@ -75,5 +75,12 @@
       "execute_command": "echo 'packer'|{{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": ["scripts/cleanup.sh"]
     }
+  ],
+  "post-processors": [
+    {
+        "type": "vagrant",
+        "output": "{{ user `vm_name` }}-{{.Provider}}.box",
+        "compression_level": "9"
+    }
   ]
 }

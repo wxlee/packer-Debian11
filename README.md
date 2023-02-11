@@ -55,3 +55,17 @@ The default credentials for this VM image are:
 |--------|--------|
 |packer|packer|
 |root|packer|
+
+
+## Run packer build vagrant box
+
+```sh
+# add new box to vagrant
+vagrant box add my-dev11 debian-11.6.0-amd64-virtualbox.box
+# show boxes
+vagrant box list
+# run it
+vagrant up
+# ssh login
+vagrant ssh
+```
