@@ -29,19 +29,19 @@
       path: /root/.vimrc
       block: |
         set nocompatible
-        set number
+        set mouse=r
         set autoindent
         syntax on
         highlight Comment ctermfg=LightCyan
       marker: ""
       state: present
 
-  - name: Enable root SSH login
-    lineinfile:
-      path: /etc/ssh/sshd_config
-      regexp: "^PermitRootLogin"
-      line: "PermitRootLogin yes"
-      state: present
+  # - name: Enable root SSH login
+  #   lineinfile:
+  #     path: /etc/ssh/sshd_config
+  #     regexp: "^PermitRootLogin"
+  #     line: "PermitRootLogin yes"
+  #     state: present
 
   - name: Disable quiet boot mode
     lineinfile:
@@ -65,12 +65,12 @@
     vars:
       packages:
       - bash-completion
-      - ccze
+      # - ccze
       - curl
       - git
       - net-tools
       - rsync
-      - screen
+      # - screen
       - tcpdump
       - vim
       - wget
