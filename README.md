@@ -20,7 +20,7 @@ Commands to create an automated VM image:
 To create a Debian 11 VM image using VMware Workstation use the following commands:
 
 ```cmd
-cd c:\packer-Debian11
+cd packer-Debian11
 packer build -only=vmware-iso debian11.json
 packer build -only=vmware-iso debian11_uefi.json
 ```
@@ -28,7 +28,7 @@ packer build -only=vmware-iso debian11_uefi.json
 To create a Debian 11 VM image using Oracle VM VirtualBox use the following commands:
 
 ```cmd
-cd c:\packer-Debian11
+cd packer-Debian11
 packer build -only=virtualbox-iso debian11.json
 packer build -only=virtualbox-iso debian11_uefi.json
 ```
@@ -42,7 +42,7 @@ You can change the URL to one closer to your build server. To do so change the *
 ```json
 {
   "variables": {
-      "iso_url": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.0.0-amd64-netinst.iso"
+      "iso_url": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.6.0-amd64-netinst.iso"
   }
 }
 ```
